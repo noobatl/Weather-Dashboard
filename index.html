@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <label class="city-search">Search for City:</label>
+          <form class="form-inline">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="city-name"
+                placeholder="Atlanta"
+              />
+              <button type="submit" class="btn btn-primary" id="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card col-lg-9">
+          <div class="card-header">
+            CITY NAME (DATE)
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Temperature:</li>
+            <li class="list-group-item">Humidity:</li>
+            <li class="list-group-item">Wind Speed:</li>
+            <li class="list-group-item">UV Index:</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="./Assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </body>
+</html>
