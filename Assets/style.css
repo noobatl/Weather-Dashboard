@@ -11,9 +11,13 @@
     margin-top: 20px;
 }
 
-#city-name,
-#search-btn {
+#city-input {
     margin-bottom: 10px;
+}
+#add-city {
+    margin-bottom: 10px;
+    width: 50px;
+    margin-top: 0px;
 }
 
 .card-header,
@@ -24,4 +28,10 @@
 #forecast-card {
     display: inline;
     margin: 10px 5px;
+}
+
+button {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
 }

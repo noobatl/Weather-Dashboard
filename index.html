@@ -27,45 +27,21 @@
     <main class="container">
       <div class="row">
         <aside class="col-lg-3">
-          <label class="city-search">Search for City:</label>
+          <label for="city-input" class="city-search">Search for City:</label>
           <form class="form-inline">
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                id="city-name"
-                placeholder="Atlanta"
+                id="city-input"
+                placeholder=""
               />
-              <button type="submit" class="btn btn-primary" id="search-btn">
+              <button type="submit" class="btn btn-primary" id="add-city" value="">
                 <i class="fas fa-search"></i>
               </button>
             </div>
           </form>
-          <div>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City1
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City2
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City3
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City4
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City5
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City6
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City7
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block">
-              City8
-            </button>
+          <div id="buttons-view">
           </div>
         </aside>
 
@@ -87,7 +63,7 @@
           <div class="card-group">
             <div class="card text-white bg-primary mb-2" id="forecast-card">
               <div class="card-body">
-                <h5 class="card-title" id="forecast-date-1">Forecast 1</h5>
+                <h5 class="card-title" id="forecast-date-1"></h5>
                 <img id="forecast-img-1"></img>
                 <p class="card-text" id="forecast-temp-1">
                   Temp:
@@ -99,7 +75,7 @@
             </div>
             <div class="card text-white bg-primary mb-2" id="forecast-card">
               <div class="card-body">
-                <h5 class="card-title" id="forecast-date-2">Forecast 2</h5>
+                <h5 class="card-title" id="forecast-date-2"></h5>
                 <img id="forecast-img-2"></img>
                 <p class="card-text" id="forecast-temp-2">
                   Temp:
@@ -111,7 +87,7 @@
             </div>
             <div class="card text-white bg-primary mb-2" id="forecast-card">
               <div class="card-body">
-                <h5 class="card-title" id="forecast-date-3">Forecast 3</h5>
+                <h5 class="card-title" id="forecast-date-3"></h5>
                 <img id="forecast-img-3"></img>
                 <p class="card-text" id="forecast-temp-3">
                   Temp:
@@ -123,7 +99,7 @@
             </div>
             <div class="card text-white bg-primary mb-2" id="forecast-card">
               <div class="card-body">
-                <h5 class="card-title" id="forecast-date-4">Forecast 4</h5>
+                <h5 class="card-title" id="forecast-date-4"></h5>
                 <img id="forecast-img-4"></img>
                 <p class="card-text" id="forecast-temp-4">
                   Temp:
@@ -135,7 +111,7 @@
             </div>
             <div class="card text-white bg-primary mb-2" id="forecast-card">
               <div class="card-body">
-                <h5 class="card-title" id="forecast-date-5">Forecast 5</h5>
+                <h5 class="card-title" id="forecast-date-5"></h5>
                 <img id="forecast-img-5"></img>
                 <p class="card-text" id="forecast-temp-5">
                   Temp:
