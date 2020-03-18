@@ -6,3 +6,22 @@
 .navbar-brand {
     font-size: 28px;
 }
+
+#current-details {
+    margin-top: 20px;
+}
+
+#city-name,
+#search-btn {
+    margin-bottom: 10px;
+}
+
+.card-header,
+.forecast-header {
+    padding-top: 20px;
+}
+
+#forecast-card {
+    display: inline;
+    margin: 10px 5px;
+}
