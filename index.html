@@ -26,37 +26,107 @@
     </nav>
     <main class="container">
       <div class="row">
-        <div class="col-lg-3">
-          <label class="city-search">Search for City:</label>
+        <aside class="col-lg-3">
+          <label for="city-input" class="city-search">Search for City:</label>
           <form class="form-inline">
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
-                id="city-name"
-                placeholder="Atlanta"
+                id="city-input"
+                placeholder=""
               />
-              <button type="submit" class="btn btn-primary" id="search-btn">
+              <button type="submit" class="btn btn-primary" id="add-city" value="">
                 <i class="fas fa-search"></i>
               </button>
             </div>
           </form>
-        </div>
-
-        <div class="card col-lg-9">
-          <div class="card-header">
-            CITY NAME (DATE)
+          <div id="buttons-view">
           </div>
+        </aside>
+
+        <div class="card col-lg" id="current-details">
+          <div class="card-header" id="current-city">
+          </div>
+          <!-- <img id="current-img"></img> -->
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Temperature:</li>
-            <li class="list-group-item">Humidity:</li>
-            <li class="list-group-item">Wind Speed:</li>
-            <li class="list-group-item">UV Index:</li>
+            <li class="list-group-item" id="current-temperature">
+              Temperature:
+            </li>
+            <li class="list-group-item" id="current-humidity">Humidity:</li>
+            <li class="list-group-item" id="current-wind">Wind Speed:</li>
+            <li class="list-group-item" id="current-uv">UV Index: </li>
           </ul>
+          <div class="forecast-header">
+            <h2>5-Day Forecast:</h2>
+          </div>
+          <div class="card-group">
+            <div class="card text-white bg-primary mb-2" id="forecast-card">
+              <div class="card-body">
+                <h5 class="card-title" id="forecast-date-1"></h5>
+                <img id="forecast-img-1"></img>
+                <p class="card-text" id="forecast-temp-1">
+                  Temp:
+                </p>
+                <p class="card-text" id="forecast-humid-1">
+                  Humidity:
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-2" id="forecast-card">
+              <div class="card-body">
+                <h5 class="card-title" id="forecast-date-2"></h5>
+                <img id="forecast-img-2"></img>
+                <p class="card-text" id="forecast-temp-2">
+                  Temp:
+                </p>
+                <p class="card-text" id="forecast-humid-2">
+                  Humidity:
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-2" id="forecast-card">
+              <div class="card-body">
+                <h5 class="card-title" id="forecast-date-3"></h5>
+                <img id="forecast-img-3"></img>
+                <p class="card-text" id="forecast-temp-3">
+                  Temp:
+                </p>
+                <p class="card-text" id="forecast-humid-3">
+                  Humidity:
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-2" id="forecast-card">
+              <div class="card-body">
+                <h5 class="card-title" id="forecast-date-4"></h5>
+                <img id="forecast-img-4"></img>
+                <p class="card-text" id="forecast-temp-4">
+                  Temp:
+                </p>
+                <p class="card-text" id="forecast-humid-4">
+                  Humidity:
+                </p>
+              </div>
+            </div>
+            <div class="card text-white bg-primary mb-2" id="forecast-card">
+              <div class="card-body">
+                <h5 class="card-title" id="forecast-date-5"></h5>
+                <img id="forecast-img-5"></img>
+                <p class="card-text" id="forecast-temp-5">
+                  Temp:
+                </p>
+                <p class="card-text" id="forecast-humid-5">
+                  Humidity:
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <script src="./Assets/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./Assets/script.js"></script>
   </body>
 </html>
