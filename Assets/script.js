@@ -1,7 +1,8 @@
-// This is our API key
-var APIKey = "99a566c439046197735a1f037b051159";
+// This is our API key (constant)
+const APIKey = "99a566c439046197735a1f037b051159";
+// Sample city until we load from form
 var city = "Atlanta";
-var currentDate = moment().format("l");
+const currentDate = moment().format("l");
 // Here we are building the URL we need to query the database
 var queryCurrentURL =
   "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -15,24 +16,24 @@ $.ajax({
 }).then(function(currentResponse) {
   // Log the queryURL and response object
   //   console.log(queryCurrentURL);
-    console.log(currentResponse);
+  console.log(currentResponse);
 
   $("#current-city").text(currentDate);
 
-//   var iconCodeCurrent = currentResponse.weather[0].icon;
-//   console.log(iconCodeCurrent);
-//   var currentIcon = $("<img>").html.attr(
-//     "src",
-//     "http://openweathermap.org/img/wn/" + iconCodeCurrent + "@2x.png"
-//   );
+  //   var iconCodeCurrent = currentResponse.weather[0].icon;
+  //   console.log(iconCodeCurrent);
+  //   var currentIcon = $("<img>").html.attr(
+  //     "src",
+  //     "http://openweathermap.org/img/wn/" + iconCodeCurrent + "@2x.png"
+  //   );
 
   // Transfer content to HTML
   $("#current-city").html(
     "<h1>" + currentResponse.name + " " + currentDate + " " + "</h1>"
   );
-//   $("#current-city").html(
-//       "<img>" + "</img>"
-//   );
+  //   $("#current-city").html(
+  //       "<img>" + "</img>"
+  //   );
   // Convert the temp to fahrenheit
   var tempF = (currentResponse.main.temp - 273.15) * 1.8 + 32;
   $("#current-temperature").text(
@@ -42,6 +43,28 @@ $.ajax({
     "Humidity: " + currentResponse.main.humidity + "%"
   );
   $("#current-wind").text("Wind Speed: " + currentResponse.wind.speed + " MPH");
+
+  var latitude = currentResponse.coord.lat;
+  var longitude = currentResponse.coord.lon;
+
+  var queryUVURL =
+    "http://api.openweathermap.org/data/2.5/uvi?appid=" +
+    APIKey +
+    "&lat=" +
+    latitude +
+    "&lon=" +
+    longitude;
+
+  $.ajax({
+    url: queryUVURL,
+    method: "GET"
+  }).then(function(UVResponse) {
+    console.log(UVResponse);
+    $("#current-uv").text(
+        "UV Index: " + UVResponse.value
+    )
+
+  });
 });
 
 var queryForecastURL =
@@ -134,5 +157,3 @@ $.ajax({
   $("#forecast-temp-5").text("Temp: " + tempF.toFixed(1) + " \u00B0F");
   $("#forecast-humid-5").text("Humidity: " + forecastFive.humidity + "%");
 });
-
-
